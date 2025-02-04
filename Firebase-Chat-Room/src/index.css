@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'poppins';
+  background: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* yetkilendirme sayfası */
+.auth {
+  background: white;
+  color: black;
+  width: 50vw;
+  height: 50vh;
+  max-width: 600px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.auth button {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 10px;
+}
+.auth img {
+  width: 40px;
+}
+
+/* oda seçme alanı */
+.room-page {
+  background-color: white;
+  color: #1a1a1a;
+  padding: 50px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.room-page input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.room-page button {
+  color: white;
+  transition: all 0.3s;
+}
+
+.room-page button:nth-child(5) {
+  background: rgb(174, 6, 40);
+}
+
+.room-page button:hover {
+  filter: brightness(60%);
+}
+
+/* Sohber Sayfası */
+.chat {
+  background: white;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.chat header {
+  background: crimson;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+}
+.chat header .user {
+  font-weight: normal;
+  text-transform: none;
+}
+
+.chat header p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.chat header a {
+  background: #646cff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Mesaj Gönderme kısmı */
+.chat form {
+  display: flex;
+  justify-content: center;
+  background: crimson;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.chat form input {
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.chat form button {
+  background: #646cff;
+  color: white;
+  transition: all 0.3s;
+}
+
+.chat form button:hover {
+  filter: brightness(70%);
+}
+
+@media (max-width: 650px) {
+  .chat {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px !important;
+  }
+
+  .chat header {
+    border-radius: 0px !important;
+  }
+
+  .chat form {
+    border-radius: 0px !important;
+  }
+}
+
+/* Mesajlar Alanı */
+.chat main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  color: #1a1a1a;
+  padding: 5px;
+}
+
+.msg-user {
+  align-self: end;
+  background: #646cff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 7px 7px 0 7px;
+}
+
+.msg-other {
+  display: flex;
+  align-items: center;
+}
+
+.msg-other .user-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.user-info span {
+  font-weight: bold;
+}
+
+.msg-other .user-info img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.msg-other .msg-text {
+  margin-left: 5px;
+}
